@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "includePath": [
+        "${workspaceFolder}/**",
+        "C:/Users/snoxy/AppData/Local/node-gyp/Cache/22.13.0/include/node/**"
+      ]
+    }
+  ],
+  "version": 4
+}
