@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Build files
+        run: pnpm run build
+
   test:
     name: Test
     runs-on: windows-latest

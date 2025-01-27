@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Build files
+        run: pnpm run build
+
       - run: pnpm publish --provenance --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -58,6 +61,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Build files
+        run: pnpm run build
 
       - run: pnpm publish --provenance --access public --no-git-checks
         env:
