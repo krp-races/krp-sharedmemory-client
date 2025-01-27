@@ -1,0 +1,43 @@
+{
+  "name": "@krp-races/krp-sharedmemory-client",
+  "description": "A node.js wrapper for shared memory plugin in kart racing pro.",
+  "keywords": [
+    "kart",
+    "racing",
+    "pro",
+    "krp",
+    "wrapper",
+    "sharedmemory"
+  ],
+  "author": "Fynn Haupt <info@fynnhaupt.de>",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier src --check --ignore-unknown",
+    "format:fix": "prettier src --write --ignore-unknown",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "./src/**/*.{js,cjs,mjs,ts,cts,mts}": "eslint --fix",
+    "./**/*": "prettier --write --ignore-unknown"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^22.10.10",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "glob": "^11.0.1",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "3.4.2",
+    "rollup": "^4.32.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0"
+  }
+}
