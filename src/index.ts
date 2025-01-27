@@ -119,3 +119,29 @@ export class KRPSharedMemoryClient extends EventEmitter<WrapperEvents> {
 }
 
 export default KRPSharedMemoryClient;
+
+export { EChallengeSessionType } from './enums/ChallengeSessionType.js';
+export { ECommunicationOffence } from './enums/CommunicationOffence.js';
+export { ECommunicationPenaltyType } from './enums/CommunicationPenaltyType.js';
+export { ECommunicationReason } from './enums/CommunicationReason.js';
+export { ECommunicationType } from './enums/CommunicationType.js';
+export { EDriveType } from './enums/DriveType.js';
+export { EEngineCooling } from './enums/EngineCooling.js';
+export { EEntryState } from './enums/EntryState.js';
+export { EEventType } from './enums/EventType.js';
+export { EGameState } from './enums/GameState.js';
+export { EPracticeSessionState } from './enums/PracticeSessionState.js';
+export { ERaceSessionState } from './enums/RaceSessionState.js';
+export { ERaceSessionType } from './enums/RaceSessionType.js';
+export { ETrackSegmentType } from './enums/TrackSegmentType.js';
+export { EWeatherCondition } from './enums/WeatherCondition.js';
+
+export { IClassification } from './interfaces/Classification.js';
+export { IClassificationEntry } from './interfaces/ClassificationEntry.js';
+export { ICommunication } from './interfaces/Communication.js';
+export { IEventEntry } from './interfaces/EventEntry.js';
+export { ISharedMemory } from './interfaces/SharedMemory.js';
+export { ISpectateVehicle } from './interfaces/SpectateVehicle.js';
+export { ITrackPosition } from './interfaces/TrackPosition.js';
+export { ITrackSegment } from './interfaces/TrackSegment.js';
+export { IVehicleData } from './interfaces/VehicleData.js';
