@@ -11,7 +11,7 @@ export default {
       fileURLToPath(new URL(file, import.meta.url))
     ])
   ),
-  external: ['module'],
+  external: ['module', 'events'],
   output: [
     {
       dir: 'dist',

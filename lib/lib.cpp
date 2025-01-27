@@ -49,8 +49,12 @@ Napi::Value Read(const Napi::CallbackInfo &info)
 
     SSharedMemory_t *memData = mem.get();
 
+    if (memData->version != SHARED_MEMORY_VERSION)
+        return env.Null();
+
     Napi::Object obj = Napi::Object::New(env);
     obj.Set("sequenceNumber", memData->sequenceNumber);
+    obj.Set("version", memData->version);
     obj.Set("gameState", (int)memData->gameState);
 
     obj.Set("driverName", memData->driverName);
@@ -342,7 +346,7 @@ Napi::Value Read(const Napi::CallbackInfo &info)
     {
         Napi::Object segment = Napi::Object::New(env);
         segment.Set("raceNumber", memData->classification.entries[i].raceNumber);
-        segment.Set("state", (int) memData->classification.entries[i].state);
+        segment.Set("state", (int)memData->classification.entries[i].state);
         segment.Set("bestLapTime", memData->classification.entries[i].bestLapTime);
         segment.Set("bestSpeed", memData->classification.entries[i].bestSpeed);
         segment.Set("bestLapNum", memData->classification.entries[i].bestLapNum);
