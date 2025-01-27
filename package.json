@@ -12,6 +12,7 @@
   "author": "Fynn Haupt <info@fynnhaupt.de>",
   "version": "1.0.0",
   "scripts": {
+    "install": "node-gyp rebuild",
     "build": "rollup -c",
     "lib:build": "node-gyp rebuild",
     "lib:clean": "node-gyp clean",
