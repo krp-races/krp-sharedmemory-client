@@ -6,12 +6,12 @@ import { fileURLToPath } from 'url';
 
 export default {
   input: Object.fromEntries(
-    globSync('src/**/!(*.test).ts').map((file) => [
+    globSync('src/**/!(*.test).{ts,cts,mts}').map((file) => [
       path.relative('src', file.slice(0, file.length - path.extname(file).length)),
       fileURLToPath(new URL(file, import.meta.url))
     ])
   ),
-  external: [],
+  external: ['module'],
   output: [
     {
       dir: 'dist',

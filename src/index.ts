@@ -1,1 +1,2 @@
-console.log('test');
+import { addon } from './binding.js';
+console.log(addon);
