@@ -1,4 +1,4 @@
-export enum RaceSessionState {
+export enum ERaceSessionState {
   InProgress = 16,
   Semaphore = 32,
   SightingLap = 64,

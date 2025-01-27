@@ -1,4 +1,4 @@
-export enum RaceSessionType {
+export enum ERaceSessionType {
   Practice = 1,
   Qualify,
   Warmup,

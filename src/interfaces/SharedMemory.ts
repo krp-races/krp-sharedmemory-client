@@ -1,11 +1,11 @@
-import { ChallengeSessionType } from '../enums/ChallengeSessionType';
+import { EChallengeSessionType } from '../enums/ChallengeSessionType';
 import { EDriveType } from '../enums/DriveType';
 import { EEngineCooling } from '../enums/EngineCooling';
 import { EEventType } from '../enums/EventType';
 import { EGameState } from '../enums/GameState';
-import { PracticeSessionState } from '../enums/PracticeSessionState';
-import { RaceSessionState } from '../enums/RaceSessionState';
-import { RaceSessionType } from '../enums/RaceSessionType';
+import { EPracticeSessionState } from '../enums/PracticeSessionState';
+import { ERaceSessionState } from '../enums/RaceSessionState';
+import { ERaceSessionType } from '../enums/RaceSessionType';
 import { EWeatherCondition } from '../enums/WeatherCondition';
 import { IClassification } from './Classification';
 import { ICommunication } from './Communication';
@@ -97,10 +97,10 @@ export interface ISharedMemory {
   numEventEntries: number;
   eventEntries: IEventEntry[];
 
-  session: 0 | RaceSessionType | ChallengeSessionType;
+  session: 0 | ERaceSessionType | EChallengeSessionType;
   sessionSeries: number;
   sessionGroups: number[];
-  sessionState: 0 | PracticeSessionState | RaceSessionState;
+  sessionState: 0 | EPracticeSessionState | ERaceSessionState;
   sessionLength: number;
   sessionLaps: number;
   numSessionEntries: number;
