@@ -1,0 +1,9 @@
+.github
+.husky
+.vscode
+build
+src
+.prettierignore
+.prettierrc
+eslint.config.mjs
+rollup.config.mjs
