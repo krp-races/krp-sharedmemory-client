@@ -1,5 +1,6 @@
 export enum ERaceSessionType {
-  Practice = 1,
+  Waiting = 0,
+  Practice,
   Qualify,
   Warmup,
   QualifyHeat,
