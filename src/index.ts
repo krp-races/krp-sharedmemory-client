@@ -73,6 +73,7 @@ export class KRPSharedMemoryClient extends EventEmitter<WrapperEvents> {
       if (e instanceof Error) this.emit('error', e.message);
     }
 
+    this.sequenceNumber = -1;
     this.connected = false;
     this.emit('disconnected');
   }
