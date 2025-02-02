@@ -10,11 +10,28 @@
     "sharedmemory"
   ],
   "author": "Fynn Haupt <info@fynnhaupt.de>",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "AGPL-3.0-only",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./enums/*": {
+      "types": "./dist/enums/*.d.ts",
+      "import": "./dist/enums/*.mjs",
+      "require": "./dist/enums/*.js"
+    },
+    "./interfaces/*": {
+      "types": "./dist/interfaces/*.d.ts",
+      "import": "./dist/interfaces/*.mjs",
+      "require": "./dist/interfaces/*.js"
+    }
+  },
   "homepage": "https://github.com/krp-races/krp-sharedmemory-client#readme",
   "repository": "https://github.com/krp-races/krp-sharedmemory-client",
   "bugs": {
