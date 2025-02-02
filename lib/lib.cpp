@@ -381,7 +381,7 @@ Napi::Value Read(const Napi::CallbackInfo &info)
 
     Napi::Array cameras = Napi::Array::New(env, memData->numCameras);
     for (int i = 0; i < memData->numCameras; i++)
-        spectateVehicles[i] = memData->cameras[i];
+        cameras[i] = memData->cameras[i];
     obj.Set("cameras", cameras);
 
     return obj;
