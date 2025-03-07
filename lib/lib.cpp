@@ -281,7 +281,7 @@ Napi::Value Read(const Napi::CallbackInfo &info)
         kartIdxVehicleData[i] = vehicleData;
 
         Napi::Array arrLapTimes = Napi::Array::New(env, MAX_LAPS);
-        for (int j = 0; j < MAX_LAPS; j++)
+        for (int j = 0; j < memData->kartIdxLap[i]; j++)
             arrLapTimes[j] = memData->kartIdxLapTimes[i][j];
         kartIdxLapTimes[i] = arrLapTimes;
     }
