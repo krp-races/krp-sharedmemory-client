@@ -123,6 +123,7 @@ export interface ISharedMemory {
   kartIdxLastLapDeltaToBestLap: number[];
   kartIdxLapDeltaToLastLap: number[];
   kartIdxLapDeltaToBestLap: number[];
+  kartIdxLapTimes: number[][];
 
   kartIdxLastSplitIndex: number[];
   kartIdxLastSplits: number[][];
