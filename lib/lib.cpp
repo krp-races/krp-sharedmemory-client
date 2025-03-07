@@ -280,7 +280,7 @@ Napi::Value Read(const Napi::CallbackInfo &info)
         vehicleData.Set("brake", memData->kartIdxVehicleData[i].brake);
         kartIdxVehicleData[i] = vehicleData;
 
-        Napi::Array arrLapTimes = Napi::Array::New(env, MAX_LAPS);
+        Napi::Array arrLapTimes = Napi::Array::New(env, min(MAX_LAPS, memData->kartIdxLapTimes[i][0]));
         for (int j = 0; j < min(MAX_LAPS, memData->kartIdxLapTimes[i][0]); j++)
             arrLapTimes[j] = memData->kartIdxLapTimes[i][j];
         kartIdxLapTimes[i] = arrLapTimes;
