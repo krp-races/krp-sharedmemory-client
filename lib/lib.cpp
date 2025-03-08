@@ -238,7 +238,6 @@ Napi::Value Read(const Napi::CallbackInfo &info)
     Napi::Array kartIdxLastSpeed = Napi::Array::New(env, memData->numSessionEntries);
     Napi::Array kartIdxBestSpeed = Napi::Array::New(env, memData->numSessionEntries);
     Napi::Array kartIdxVehicleData = Napi::Array::New(env, memData->numSessionEntries);
-    Napi::Array kartIdxLapTimes = Napi::Array::New(env, memData->numSessionEntries);
     for (int i = 0; i < memData->numSessionEntries; i++)
     {
         sessionEntries[i] = memData->sessionEntries[i];
@@ -279,11 +278,6 @@ Napi::Value Read(const Napi::CallbackInfo &info)
         vehicleData.Set("throttle", memData->kartIdxVehicleData[i].throttle);
         vehicleData.Set("brake", memData->kartIdxVehicleData[i].brake);
         kartIdxVehicleData[i] = vehicleData;
-
-        Napi::Array arrLapTimes = Napi::Array::New(env, min(MAX_LAPS, memData->kartIdxLap[i]));
-        for (int j = 0; j < min(MAX_LAPS, memData->kartIdxLap[i]); j++)
-            arrLapTimes[j] = memData->kartIdxLapTimes[i][j];
-        kartIdxLapTimes[i] = arrLapTimes;
     }
     obj.Set("sessionEntries", sessionEntries);
     obj.Set("sessionGrid", sessionGrid);
@@ -303,7 +297,6 @@ Napi::Value Read(const Napi::CallbackInfo &info)
     obj.Set("kartIdxLastSpeed", kartIdxLastSpeed);
     obj.Set("kartIdxBestSpeed", kartIdxBestSpeed);
     obj.Set("kartIdxVehicleData", kartIdxVehicleData);
-    obj.Set("kartIdxLapTimes", kartIdxLapTimes);
 
     obj.Set("numCommunications", memData->numCommunications);
 
